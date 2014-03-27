@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app='epicookbook'>
+<head>
+  <meta charset="utf-8">
+  <title>Epicookbook</title>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+
+<body>
+  <div class='header'>
+    <h1>Epicookbook</h1>
+  </div> 
+  
+
+
+<div ng-controller='ComponentsController'>
+  <ul>
+    <li ng-repeat='component in components'>
+      {{component.name}}
+    </li>
+  </ul>
+</div>
+
+
+
+
+  <div ng-view></div>
+ 
+</body>
+</html> 
