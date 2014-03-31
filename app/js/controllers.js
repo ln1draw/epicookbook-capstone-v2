@@ -1,10 +1,13 @@
-var epicookbook = angular.module('epicookbook', []);
+var epicookbookControllers = angular.module('epicookbookControllers', []);
 
-epicookbook.controller('ComponentsController', function($scope){
-  $scope.components = [
-    {'name': 'corn'},
-    {'name': 'wheat'},
-    {'name': 'high fructose corn syrup'},
-    {'name': 'banana'}
-  ];
-})
+epicookbookControllers.controller('ComponentsController', ['$scope', '$http',
+  function($scope, $http){
+    $http.get('components/components.json').success(function(data){
+      $scope.components = data;
+    });
+  }]);
+
+epicookbookControllers.controller('HomeController', ['$scope', '$http', 
+  function($scope, $http){
+
+  }]);

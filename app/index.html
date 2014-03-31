@@ -4,28 +4,25 @@
   <meta charset="utf-8">
   <title>Epicookbook</title>
   <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src='js/app.js'></script>
   <script src="js/controllers.js"></script>
+  <script src="https://app.userapp.io/js/userapp.client.js"></script>
+  <script src="https://rawgithub.com/userapp-io/userapp-angular/master/angularjs.userapp.js"></script>
 </head>
 
 <body>
   <div class='header'>
     <h1>Epicookbook</h1>
   </div> 
-  
+  <ul class="menu">
+        <li ng-show="!user.authenticated"><a href="#/login">log in</a></li>
+        <li ng-show="!user.authenticated"><a href="#/signup">sign up</a></li>
+        <li><a href="#/home">home</a></li>
+        <li ng-show="user.authenticated"><a ua-logout href=''>log out</a></li>
+    </ul>
 
-
-<div ng-controller='ComponentsController'>
-  <ul>
-    <li ng-repeat='component in components'>
-      {{component.name}}
-    </li>
-  </ul>
-</div>
-
-
-
-
-  <div ng-view></div>
+    <div ng-view></div>
  
 </body>
 </html> 

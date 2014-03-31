@@ -1,7 +1,7 @@
 <div ng-controller='ComponentsController'>
-  <h1>I am rendering components</h1>
+  Search: <input ng-model="query">
   <ul>
-    <li ng-repeat='component in components'>
+    <li ng-repeat='component in components | filter:query'>
       {{component.name}}
     </li>
   </ul>
