@@ -25,8 +25,12 @@ epicookbook.config(['$routeProvider',
       public: true
     }).
 
+    when('/profile', {
+      templateUrl: 'partials/profile.html'
+    }).
+
     otherwise({
-      redirectTo: '/home'
+      redirectTo: '/profile'
     });
   }
 ])

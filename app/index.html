@@ -18,7 +18,7 @@
   <ul class="menu">
         <li ng-show="!user.authenticated"><a href="#/login">log in</a></li>
         <li ng-show="!user.authenticated"><a href="#/signup">sign up</a></li>
-        <li><a href="#/home">home</a></li>
+        <li ng-show='user.authenticated'><a href="#/profile">profile</a></li>
         <li ng-show="user.authenticated"><a ua-logout href=''>log out</a></li>
     </ul>
 
