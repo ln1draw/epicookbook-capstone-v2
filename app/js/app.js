@@ -29,6 +29,21 @@ epicookbook.config(['$routeProvider',
       templateUrl: 'partials/profile.html'
     }).
 
+    when('/verify-email', {
+      templateUrl: 'partials/verify-email.html',
+      verify_email: true
+    }).
+
+    when('/reset-password', {
+      templateUrl: 'partials/reset-password.html',
+      public: true
+    }).
+
+    when('/set-password', {
+      templateUrl: 'partials/set-password.html',
+      set_password: true
+    }).
+
     otherwise({
       redirectTo: '/profile'
     });
