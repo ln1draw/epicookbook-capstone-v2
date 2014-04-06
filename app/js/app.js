@@ -3,7 +3,8 @@
 var epicookbook = angular.module('epicookbook', [
   'ngRoute',
   'epicookbookControllers',
-  'UserApp'
+  'UserApp',
+  'restangular'
 ]);
 
 epicookbook.config(['$routeProvider',
@@ -42,6 +43,11 @@ epicookbook.config(['$routeProvider',
     when('/set-password', {
       templateUrl: 'partials/set-password.html',
       set_password: true
+    }).
+
+    when('/recipe/new', {
+      templateUrl: 'partials/new-recipe.html',
+      controller: 'NewRecipeController'
     }).
 
     otherwise({

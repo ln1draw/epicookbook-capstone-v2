@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Epicookbook</title>
+  <link rel="stylesheet" href="css/semantic.css">
+  <link rel="stylesheet" href="css/semantic.min.css">
+  <link rel="stylesheet" href="css/app.css">
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src='js/app.js'></script>
@@ -13,16 +16,17 @@
 
 <body>
   <div class='header'>
-    <h1>Epicookbook</h1>
-  </div> 
-  <ul class="menu">
-        <li ng-show="!user.authenticated"><a href="#/login">log in</a></li>
-        <li ng-show="!user.authenticated"><a href="#/signup">sign up</a></li>
-        <li ng-show='user.authenticated'><a href="#/profile">profile</a></li>
-        <li ng-show="user.authenticated"><a ua-logout href=''>log out</a></li>
+    <h1><a href='#'>Epicookbook</a></h1>
+    <ul class="header-menu">
+      <li ng-show="user.authenticated"><a href='#/recipe/new'>Create a New Recipe</a></li>
+      <li ng-show="!user.authenticated"><a href="#/login">log in</a></li>
+      <li ng-show="!user.authenticated"><a href="#/signup">sign up</a></li>
+      <li ng-show='user.authenticated'><a href="#/profile">profile</a></li>
+      <li ng-show="user.authenticated"><a ua-logout href=''>log out</a></li>
     </ul>
+  </div>
 
-    <div ng-view></div>
+  <div ng-view></div>
  
 </body>
 </html> 

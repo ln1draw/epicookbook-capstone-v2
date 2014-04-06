@@ -1,0 +1,8 @@
+<div ng-controller='NewRecipeController'>
+  Search: <input ng-model="query">
+  <ul>
+    <li ng-repeat='component in components | filter:query'>
+      {{component.name}}
+    </li>
+  </ul>
+</div>
