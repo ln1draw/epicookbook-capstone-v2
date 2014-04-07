@@ -16,33 +16,38 @@ epicookbook.config(['$routeProvider',
     }).
 
     when('/login', {
-      templateUrl: 'partials/login.html',
+      templateUrl: 'partials/user/login.html',
       public: true,
       login: true
     }).
 
     when('/signup', {
-      templateUrl: 'partials/signup.html',
+      templateUrl: 'partials/user/signup.html',
       public: true
     }).
 
     when('/profile', {
-      templateUrl: 'partials/profile.html'
+      templateUrl: 'partials/user/profile.html'
     }).
 
     when('/verify-email', {
-      templateUrl: 'partials/verify-email.html',
+      templateUrl: 'partials/user/verify-email.html',
       verify_email: true
     }).
 
     when('/reset-password', {
-      templateUrl: 'partials/reset-password.html',
+      templateUrl: 'partials/user/reset-password.html',
       public: true
     }).
 
     when('/set-password', {
-      templateUrl: 'partials/set-password.html',
+      templateUrl: 'partials/user/set-password.html',
       set_password: true
+    }).
+
+    when('/recipe/new', {
+      templateUrl: 'partials/recipe/new.html',
+      controller: 'RecipeController'
     }).
 
     otherwise({

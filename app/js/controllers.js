@@ -7,3 +7,11 @@ epicookbookControllers.controller('HomeController', ['$scope', 'Restangular',
       $scope.recipes = someRecipes;
     });
   }]);
+
+epicookbookControllers.controller('RecipeController', ['$scope', 'Restangular',
+  function($scope, Restangular){
+    var getRecipes = Restangular.all('http://localhost:3000/recipes');
+    getRecipes.getList().then(function(someRecipes){
+      $scope.recipes = someRecipes;
+    });
+  }]);
