@@ -2,6 +2,7 @@
 
 var epicookbook = angular.module('epicookbook', [
   'ngRoute',
+  'restangular',
   'epicookbookControllers',
   'UserApp'
 ]);

@@ -1,5 +1,5 @@
 var epicookbookControllers = angular.module('epicookbookControllers', []);
 
-epicookbookControllers.controller('HomeController', ['$scope', '$http',
-  function($scope, $http){
+epicookbookControllers.controller('HomeController', ['$scope', 'Restangular',
+  function($scope, Restangular){
   }]);
