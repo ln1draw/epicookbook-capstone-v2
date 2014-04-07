@@ -45,7 +45,7 @@ epicookbook.config(['$routeProvider',
     }).
 
     otherwise({
-      redirectTo: '/profile'
+      templateUrl: 'partials/home-page.html'
     });
   }
 ])
