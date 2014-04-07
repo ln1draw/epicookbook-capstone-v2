@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/semantic/packaged/css/semantic.min.css">
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
+  <!-- Order is VERY important for these scripts -->
   <script type="text/javascript" src="../node_modules/lodash/lodash.js"></script>
   <script src='../node_modules/restangular/src/restangular.js'></script>
   <script src='js/app.js'></script>
@@ -15,20 +16,19 @@
   <script src="https://app.userapp.io/js/userapp.client.js"></script>
   <script src="https://rawgithub.com/userapp-io/userapp-angular/master/angularjs.userapp.js"></script>
 </head>
-<!-- STUPID LOAD ERRORS -->
 
 <body>
   <div class='header'>
     <h1><a href='#'>Epicookbook</a></h1>
-  </div> 
-  <ul class="header-menu">
-        <li ng-show="!user.authenticated"><a href="#/login">log in</a></li>
-        <li ng-show="!user.authenticated"><a href="#/signup">sign up</a></li>
-        <li ng-show='user.authenticated'><a href="#/profile">profile</a></li>
-        <li ng-show="user.authenticated"><a ua-logout href=''>log out</a></li>
-    </ul>
+    <div class="ui menu">
+      <a class='item' ng-show="!user.authenticated" href="#/login">log in</a>
+      <a class='item' ng-show="!user.authenticated" href="#/signup">sign up</a>
+      <a class='item' ng-show='user.authenticated' href="#/profile">profile</a>
+      <a class='item' ng-show="user.authenticated" ua-logout href=''>log out</a>
+    </div>
+  </div>
 
-    <div ng-view></div>
+  <div ng-view></div>
  
 </body>
 </html> 

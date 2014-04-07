@@ -2,7 +2,7 @@
 <form ua-login class='ui form segment'>
   <div class='field'>
     <div class='ui left labeled icon input'>
-      <input name="login" placeholder="Username" type='text'>
+      <input name="login" placeholder="Email address" type='text'>
       <i class='user icon'></i><br>
     </div>
   </div>
@@ -14,8 +14,9 @@
     </div>
   </div>
 
-  <div class='ui blue submit button'>Log In</div>
+  <button class='ui blue submit button'>Log In</button>
   
+  <!-- SOMETHING IS BROKEN HERE. Error messages don't flash anymore, ever since I added semanticUI -->
   <p ng-show="error">{{ error.message }}</p>
 </form>
 

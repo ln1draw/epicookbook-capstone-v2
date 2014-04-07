@@ -1,1 +1,6 @@
- 
+<ul>
+  <li ng-repeat='recipe in recipes | filter:query'>
+    {{recipe.name}}
+  </li>
+</ul> 
+
